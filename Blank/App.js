@@ -12,6 +12,14 @@ const Texto= ()=>{
   );
 }
 
+const Boton = () => {
+  const [contenido, setContenido] = useState("Presioname");
+  const actualizarBoton = () => { setContenido("Me Presionas muy fuerte"); };
+  return (
+    <Button title={contenido} onPress={actualizarBoton}/>
+  );
+};
+
 /* ZONA 2: Main */
 export default function App() {
   return (
@@ -22,6 +30,8 @@ export default function App() {
       <Texto > Mundo </Texto>
       <Texto > React Native </Texto>
       <Button title="Presionar"> </Button>
+      <Boton/>
+      <Boton/>
       <StatusBar style="auto" />
 
     </View>
