@@ -4,11 +4,11 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import React, { useState } from 'react';
 
 // componente Propio Texto
-const Texto= ()=>{
+const Texto= ({style})=>{
   const [contenido,setContenido]=useState("Hola Mundo");
   const actualizaTexto=()=>{setContenido("Estado modificado")}
   return (
-    <Text onPress={actualizaTexto}> {contenido} </Text>
+    <Text style={[styles.text,style]} onPress={actualizaTexto}> {contenido} </Text>
   );
 }
 
@@ -26,13 +26,12 @@ export default function App() {
 
     <View style={styles.container}>
 
-      <Texto > Hola </Texto>
-      <Texto > Mundo </Texto>
-      <Texto > React Native </Texto>
-      <Button title="Presionar"> </Button>
-      <Boton/>
-      <Boton/>
       <StatusBar style="auto" />
+      <Texto style={styles.rosa}> Hola </Texto>
+      <Texto style={styles.azul}> Mundo </Texto>
+      <Texto style={styles.negro}> React Native </Texto>
+      {/*<Button title="Presionar"> </Button>*/}
+      {/*<Boton/>*/}
 
     </View>
 
@@ -44,7 +43,26 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
+    // alineamiento de izquierda a derecha
+    //flex-start lo posiciona en la parte izquierda
+    //flex-end lo posiciona en la parte derecha
+    alignItems: 'stretch',
+    // justify va de arriba para abajo
+    //flex-start lo posiciona en la parte superior
+    //flex-end lo posiciona en la parte inferior
+    // space-between separa entre sí los elementos
+    // space-around alinea los elementos entre sí
+    // space-evenly alinea los elementos entre sí igual
     justifyContent: 'center',
+    // flex 0 significa que no se ocupa ningun espacio
   },
+  text: {
+    color:"white",
+    fontSize:27,
+    //height:120,
+    //width:120,
+  },
+  azul:{backgroundColor:"blue"},
+  negro:{backgroundColor:"black"},
+  rosa:{backgroundColor:"pink"},
 });
