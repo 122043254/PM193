@@ -46,10 +46,10 @@ const styles = StyleSheet.create({
     // alineamiento de izquierda a derecha
     //flex-start lo posiciona en la parte izquierda
     //flex-end lo posiciona en la parte derecha
-    alignItems: 'stretch',
-    // justify va de arriba para abajo
+    alignItems: 'center',
     //flex-start lo posiciona en la parte superior
     //flex-end lo posiciona en la parte inferior
+    // justify va de arriba para abajo
     // space-between separa entre sí los elementos
     // space-around alinea los elementos entre sí
     // space-evenly alinea los elementos entre sí igual
@@ -59,10 +59,10 @@ const styles = StyleSheet.create({
   text: {
     color:"white",
     fontSize:27,
-    //height:120,
-    //width:120,
+    height:120,
+    width:120,
   },
-  azul:{backgroundColor:"blue"},
-  negro:{backgroundColor:"black"},
-  rosa:{backgroundColor:"pink"},
+  azul:{backgroundColor:"blue", flex:1},
+  negro:{backgroundColor:"black", flex:3},
+  rosa:{backgroundColor:"pink", flex:2},
 });
