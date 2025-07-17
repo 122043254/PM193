@@ -4,6 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import Home from './screens/home';
 import Profile from './screens/profile';
 import Settings from './screens/settings';
+import ProfileStack from './screens/ProfileStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -31,7 +32,7 @@ export default function App() {
         })}
       >
         <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Profile" component={Profile} />
+        <Tab.Screen name="Profile" component={ProfileStack} />
         <Tab.Screen name="Settings" component={Settings} />
       </Tab.Navigator>
     </NavigationContainer>
